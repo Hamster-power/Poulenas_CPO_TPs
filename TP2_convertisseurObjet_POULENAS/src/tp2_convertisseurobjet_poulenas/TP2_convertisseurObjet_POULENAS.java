@@ -32,22 +32,29 @@ public class TP2_convertisseurObjet_POULENAS {
         temperature = sc.nextDouble();
         Convertisseur conversion = new Convertisseur();
         if (choix==1){
-            conversion.CelciusVersKelvin(temperature);
+            double res = conversion.CelciusVersKelvin(temperature);
+            System.out.println(temperature+" degrés Celcuis font : "+res+" degrés Kelvin");
             System.out.println(conversion); 
         }else if (choix==2){
-            conversion.KelvinVersCelcius(temperature);
+            double res =conversion.KelvinVersCelcius(temperature);
+            System.out.println(temperature+" degrés Kelvin font : "+res+" degrés Celcuis");
             System.out.println(conversion);
+
         }else if (choix==3){
-            conversion.CelciusVersFarenheit(temperature);
+            double res = conversion.CelciusVersFarenheit(temperature);
+            System.out.println(temperature+" degrés Celcuis font : "+res+" degrés Farenheit");
             System.out.println(conversion);
         }else if (choix==4){
-            conversion.FarenheitVersCelcius(temperature);
+            double res = conversion.FarenheitVersCelcius(temperature);
+            System.out.println(temperature+" degrés Farenheit font : "+res+" degrés Celcuis");
             System.out.println(conversion);
         }else if (choix==5){
-            conversion.KelvinVersFarenheit(temperature);
+            double res = conversion.KelvinVersFarenheit(temperature);
+            System.out.println(temperature+" degrés Kelvin font : "+res+" degrés Farenheit");
             System.out.println(conversion);
         }else if (choix==6){
-            conversion.FarenheitVersKelvin(temperature);
+            double res = conversion.FarenheitVersKelvin(temperature);
+            System.out.println(temperature+" degrés Farenheit font : "+res+" degrés Kelvin");
             System.out.println(conversion);
         }
     }
