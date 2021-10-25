@@ -4,7 +4,6 @@
  */
 package tp2_relation_1_pouenas;
 
-import static java.lang.constant.ConstantDescs.NULL;
 
 
 /**
@@ -21,7 +20,7 @@ public class Voiture {
         modele = unModele;
         marque= uneMarque;
         PuissanceCV= unePuissance;
-        Proprietaire=(Personne) NULL;
+        Proprietaire=(Personne) null;
         
     }       
         

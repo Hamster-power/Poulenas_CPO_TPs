@@ -29,7 +29,7 @@ public class TP2_relation_1_POUENAS {
         bob.liste_voitures[0] = uneClio ;
         bob.nbVoitures = 1 ;
         uneClio.Proprietaire = bob ;
-        System.out.println("la premiere voiture de Bob est " + bob.liste_voitures ) ;
+        System.out.println("la premiere voiture de Bob est " + bob.liste_voitures[0] ) ;
 
 
 
