@@ -30,7 +30,18 @@ public class TP2_relation_1_POUENAS {
         bob.nbVoitures = 1 ;
         uneClio.Proprietaire = bob ;
         System.out.println("la premiere voiture de Bob est " + bob.liste_voitures[0] ) ;
-
+        bob.liste_voitures[1]= uneMicra;
+        bob.nbVoitures=2;
+        uneMicra.Proprietaire = bob;
+        System.out.println("la seconde voiture de Bob est " + bob.liste_voitures[1] ) ;
+        reno.liste_voitures[0]=uneAutreClio;
+        reno.nbVoitures=1;
+        uneAutreClio.Proprietaire=reno;
+        System.out.println("la premiere voiture de Reno est " + reno.liste_voitures[0] ) ;
+        reno.liste_voitures[1]=une2008;
+        reno.nbVoitures=2;
+        une2008.Proprietaire=reno;
+        System.out.println("la seconde voiture de Reno est " + reno.liste_voitures[1] ) ;
 
 
     }
