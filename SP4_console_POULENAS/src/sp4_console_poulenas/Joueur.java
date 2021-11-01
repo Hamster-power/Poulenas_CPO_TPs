@@ -9,6 +9,18 @@ package sp4_console_poulenas;
  * @author Poulenas
  */
 public class Joueur {
-    int nom;
+    String nom;
     String couleur;
+    Jeton[] listeJetons;
+    int nombresJetonsRestants;
+    
+    public void joueur (String nomJoueur){
+    nom = nomJoueur;
+    }
+    public void affetcerCouleur(String couleurChoisie){
+       couleur = couleurChoisie; 
+    }
+    public void ajouterJetons (Jeton leJeton){
+        
+    }
 }
