@@ -25,7 +25,15 @@ public class Grille {
         
     }
     public boolean etreRempli(){
-        
+        for (int i=0; i<7; i++){
+           if (colonneRemplie(i)==true) {
+              int temp = 0;
+           } else {
+              int temp=1;
+           }
+           
+           
+           
     }
     public void videGrille(){
         
