@@ -10,4 +10,10 @@ package sp4_console_poulenas;
  */
 public class Jeton {
     String couleur;
+    public void jeton (String laCouleur){
+        couleur = laCouleur;
+    }
+    public String lireCouleur(){
+        return couleur;
+    }
 }
