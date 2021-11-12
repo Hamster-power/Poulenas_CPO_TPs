@@ -21,36 +21,55 @@ public class Grille {
         } 
     }
 }
-    public void ajouterJetonDansColonne (Jeton LeJeton, int nombre){
-        
+    public boolean ajouterJetonDansColonne (Jeton LeJeton, int nombre){
+        for (int i=0; i<6; i++){
+            if (cellulesJeu[i][nombre]==null){
+                cellulesJeu[i][nombre].jetonCourant=LeJeton;
+                return true; 
+            }
+        }
+        return false;
     }
+        
+    
     public boolean etreRempli(){
         for (int i=0; i<7; i++){
-           if (colonneRemplie(i)==true) {
-              int temp = 0;
-           } else {
-              int temp=1;
+           if (colonneRemplie(i)!=true) {
+               return false; 
            }
-           
-           
-           
+        }
+        return true;
+            
+        
     }
     public void videGrille(){
-        
+        for (int i=0; i<6; i++){
+            for (int j=0; j<7; j++){
+                cellulesJeu[i][j].jetonCourant=null;
+            }
+    }   
     }
     public void afficherGrilleSurConsole (){
         
     }
-    public void celluleOccupee (int nombre1, int nombre2){
-        
+    public boolean celluleOccupee (int nombre1, int nombre2){
+        if (cellulesJeu[nombre1][nombre2].jetonCourant!=null){
+            return true;
+        }
+        return false;
     }
     public String lireCouleurJeton (int nombre1, int nombre2){
-      return   
-    }
+         return cellulesJeu[nombre1][nombre2].jetonCourant.couleur;
+    }         
     public boolean etreGagnantePourJoueur (Joueur LeJoueur){
-        return 
+         
     }
     public boolean colonneRemplie (int nombre){
-        return 
+         for (int j=0; j<6; j++){
+             if (cellulesJeu[j][nombre]==null){
+                 return false;
+             }
+         }
+         return true;
     }
 }
