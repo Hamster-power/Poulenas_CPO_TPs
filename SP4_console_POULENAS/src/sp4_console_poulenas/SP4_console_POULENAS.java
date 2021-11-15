@@ -18,6 +18,21 @@ public class SP4_console_POULENAS {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        Jeton J = new Jeton ("rouge");
+        String S = J.lireCouleur();
+        System.out.println(S);
+        Cellule C = new Cellule();
+        S=C.lireCouleurDuJeton();
+        System.out.println(S);
+        C.affecterJeton(J);
+        S=C.lireCouleurDuJeton();
+        System.out.println(S);
+        Grille G = new Grille();
+        G.afficherGrilleSurConsole();
+        G.ajouterJetonDansColonne(J,3);
+        G.afficherGrilleSurConsole();
+        
+        
         
     }
     

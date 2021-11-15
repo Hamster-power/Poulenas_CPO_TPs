@@ -10,11 +10,15 @@ package sp4_console_poulenas;
  */
 public class Cellule {
     Jeton jetonCourant;
-    public void Cellule (){
-        
+    public Cellule (){
+        jetonCourant=null;
     }
-    public void affecterJeton(Jeton LeJeton){
-        
+    public boolean affecterJeton(Jeton LeJeton){
+        if (jetonCourant ==null){
+            jetonCourant = LeJeton;
+            return true;
+        }
+        return false;
     }
  
     public String lireCouleurDuJeton (){

@@ -11,8 +11,8 @@ package sp4_console_poulenas;
 public class Joueur {
     String nom;
     String couleur;
-    Jeton[] listeJetons;
-    int nombresJetonsRestants;
+    Jeton[] listeJetons = new Jeton [21];
+    int nombresJetonsRestants = 0;
     
     public void joueur (String nomJoueur){
     nom = nomJoueur;
@@ -20,7 +20,13 @@ public class Joueur {
     public void affetcerCouleur(String couleurChoisie){
        couleur = couleurChoisie; 
     }
-    public void ajouterJetons (Jeton leJeton){
+    public boolean ajouterJetons (Jeton leJeton){
+        if (nombresJetonsRestants<22){
+        listeJetons[nombresJetonsRestants]= leJeton;
+        nombresJetonsRestants++;
+        return true;
+        }
+        return false;
         
     }
 }

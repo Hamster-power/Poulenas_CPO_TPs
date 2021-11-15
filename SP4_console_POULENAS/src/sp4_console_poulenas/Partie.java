@@ -9,5 +9,18 @@ package sp4_console_poulenas;
  * @author Poulenas
  */
 public class Partie {
+    Joueur[]ListeJoueurs= new Joueur[2];
+    Joueur joueurCourant;
+    Grille grilleJeu;
+    public void attribuerCouleursAuxJoueurs (){
+        ListeJoueurs[0].couleur="rouge";
+        ListeJoueurs[1].couleur="jaune";
+    }
+    public void initialiserPartie(){
+        
+    }
+    public void debuterPartie(){
+        
+    }
     
 }
