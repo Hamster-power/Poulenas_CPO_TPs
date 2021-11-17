@@ -28,7 +28,7 @@ public class SP4_console_POULENAS {
         S=C.lireCouleurDuJeton();
         System.out.println(S);
         Grille G = new Grille();
-        G.afficherGrilleSurConsole();
+        //G.afficherGrilleSurConsole();
         G.ajouterJetonDansColonne(J,3);
         G.afficherGrilleSurConsole();
         

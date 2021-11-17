@@ -12,12 +12,16 @@ public class Partie {
     Joueur[]ListeJoueurs= new Joueur[2];
     Joueur joueurCourant;
     Grille grilleJeu;
+    public Partie ( Joueur joueur1, Joueur joueur2 ){
+        
+    }
     public void attribuerCouleursAuxJoueurs (){
         ListeJoueurs[0].couleur="rouge";
         ListeJoueurs[1].couleur="jaune";
     }
     public void initialiserPartie(){
-        
+       Grille GrilleJeu; 
+       
     }
     public void debuterPartie(){
         
