@@ -43,7 +43,12 @@ public class Cellule {
         return false;
     }
     public boolean activerTrouNoir(){
-        
+         if (jetonCourant!=null){
+             jetonCourant=null;
+             trouNoir=false;
+             return true;
+                     
+         }
         return false;
     }
    
