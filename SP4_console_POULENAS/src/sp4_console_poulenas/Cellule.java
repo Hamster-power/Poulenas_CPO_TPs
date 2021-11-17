@@ -10,6 +10,7 @@ package sp4_console_poulenas;
  */
 public class Cellule {
     Jeton jetonCourant;
+    boolean trouNoir;
     public Cellule (){
         jetonCourant=null;
     }
@@ -27,6 +28,23 @@ public class Cellule {
         }else {
         return jetonCourant.couleur;
         }
+    }
+    public boolean placerTrouNoir(){
+        if (trouNoir==false){
+            trouNoir=true;
+            return true;
+        }
+      return false;  
+    }
+    public boolean prescenceTrouNoir(){
+        if (trouNoir==true){
+            return true;
+        }
+        return false;
+    }
+    public boolean activerTrouNoir(){
+        
+        return false;
     }
    
 }

@@ -14,7 +14,7 @@ public class Joueur {
     Jeton[] listeJetons = new Jeton [21];
     int nombresJetonsRestants = 0;
     
-    public void joueur (String nomJoueur){
+    public Joueur (String nomJoueur){
     nom = nomJoueur;
     }
     public void affetcerCouleur(String couleurChoisie){

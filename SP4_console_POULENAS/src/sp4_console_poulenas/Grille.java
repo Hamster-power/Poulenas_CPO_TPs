@@ -115,10 +115,14 @@ public class Grille {
 }
     public boolean colonneRemplie (int nombre){
          for (int j=0; j<6; j++){
-             if (cellulesJeu[j][nombre]==null){
+             if (cellulesJeu[j][nombre].jetonCourant==null){
                  return false;
              }
          }
          return true;
+    }
+    public boolean placerTrouNoir (int nombre1, int nombre2){
+        return cellulesJeu[nombre1][nombre2].placerTrouNoir();
+        
     }
 }

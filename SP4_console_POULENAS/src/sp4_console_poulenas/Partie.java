@@ -15,7 +15,8 @@ public class Partie {
     Joueur joueurCourant;
     Grille grilleJeu;
     public Partie ( Joueur joueur1, Joueur joueur2 ){
-        
+        ListeJoueurs[0]=joueur1;
+        ListeJoueurs[1]=joueur2;
     }
     public void attribuerCouleursAuxJoueurs (){
         ListeJoueurs[0].couleur="rouge";
@@ -38,10 +39,11 @@ public class Partie {
             System.out.println("Choisissez une colonne");
             int choix = sc.nextInt();
             while ( choix != 1 && choix !=2 && choix!= 3 && choix != 4 && choix !=5 && choix != 6){
+                System.out.println("Choisissez une colonne");
                 choix = sc.nextInt();
             }
             while (grilleJeu.colonneRemplie(choix)!=false){
-                System.out.println("Choisissez une colonne");
+                System.out.println("Choisissez une colonne (colonne remplie)");
                 choix = sc.nextInt();
                 while ( choix != 1 || choix !=2 || choix!= 3 || choix != 4 || choix !=5 || choix != 6){
                     choix = sc.nextInt();
@@ -50,6 +52,7 @@ public class Partie {
             Jeton J = joueurCourant.listeJetons[joueurCourant.nombresJetonsRestants-1];
             joueurCourant.nombresJetonsRestants--;
             grilleJeu.ajouterJetonDansColonne(J, choix);
+            grilleJeu.afficherGrilleSurConsole();
             if (joueurCourant==ListeJoueurs[0]){
                 joueurCourant=ListeJoueurs[1];                
             }else{
