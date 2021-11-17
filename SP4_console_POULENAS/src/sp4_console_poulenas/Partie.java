@@ -20,10 +20,18 @@ public class Partie {
         ListeJoueurs[1].couleur="jaune";
     }
     public void initialiserPartie(){
-       Grille GrilleJeu; 
-       
+       grilleJeu = new Grille();
+       for (int i=0; i<21; i++){
+           ListeJoueurs[0].ajouterJetons(new Jeton ("rouge"));
+           ListeJoueurs[1].ajouterJetons(new Jeton ("jaune"));
+       }
     }
     public void debuterPartie(){
+        grilleJeu.afficherGrilleSurConsole();
+        joueurCourant=ListeJoueurs[0];
+        while (grilleJeu.etreRempli()!=true || grilleJeu.etreGagnantePourJoueur(joueurCourant)!=true){
+            
+        }
         
     }
     
