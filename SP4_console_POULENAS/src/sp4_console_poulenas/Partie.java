@@ -23,6 +23,7 @@ public class Partie {
         ListeJoueurs[1].couleur="jaune";
     }
     public void initialiserPartie(){
+       attribuerCouleursAuxJoueurs ();
        grilleJeu = new Grille();
        for (int i=0; i<21; i++){
            ListeJoueurs[0].ajouterJetons(new Jeton ("rouge"));
@@ -32,7 +33,10 @@ public class Partie {
     public void debuterPartie(){
         grilleJeu.afficherGrilleSurConsole();
         joueurCourant=ListeJoueurs[0];
-        while (grilleJeu.etreRempli()!=true || grilleJeu.etreGagnantePourJoueur(joueurCourant)!=true){
+        boolean a,b; 
+        while ((a=grilleJeu.etreRempli())!=true && (b=grilleJeu.etreGagnantePourJoueur(joueurCourant))!=true){
+            System.out.println(a+ " et " +b);
+            
             grilleJeu.afficherGrilleSurConsole();
             Scanner sc; 
             sc = new Scanner(System.in);
